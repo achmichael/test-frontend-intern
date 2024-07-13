@@ -1,0 +1,45 @@
+footer {
+  margin-top: 2rem;
+  background-color: #0056b3;
+  margin-bottom: 0;
+}
+.socials a {
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+.socials,
+.links {
+  margin-bottom: 1.4rem;
+}
+.socials a:hover,
+.links a:hover {
+  color: #e7c715;
+}
+.links a {
+  font-size: 1rem;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.credit a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+}

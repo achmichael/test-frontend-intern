@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar {
+  color: white;
+  padding: 2.5% 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0056b3;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+}
+.nav-menu {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.nav-menu a {
+  display: block;
+  padding: 0.7rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #e7c715;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-open {
+  transform: rotate(45deg);
+}
+
+.menu-close {
+  transform: rotate(0);
+}
+.running-text {
+  margin-top: 2rem;
+  color: #333;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.container-form {
+  display: flex;
+  max-width: 650px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 90%;
+  margin: 3rem auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.currency-form {
+  width: 100%;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-currency,
+select,
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.input-currency:focus,
+select:focus,
+.submit-button:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.2em;
+}
+
+.conversion-result {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.conversion-result .conversion-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: grey 1px 1px 3px;
+  margin-bottom: 0.5rem;
+}
+
+.conversion-result .result {
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 75%;
+  } 
+}
+
+@media (max-width: 768px) {
+  html,
+  .submit-button {
+    font-size: 50%;
+  }
+  .menu-icon:hover {
+    color: #e7c715;
+  }
+  .nav-menu {
+    right: -100%;
+    position: absolute;
+    top: 0;
+    width: 25%;
+    margin: 0;
+    background-color: #0056b3;
+    height: 100vh;
+    padding: 1.2rem 0.5rem;
+    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), 22px 20px 40px rgba(0, 0, 0, 0.1);
+    /*Ratakiriuntukkomponenpadanav-menu*/-webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+  .nav-menu a {
+    display: block;
+    padding: 2rem 1rem;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    width: 100%; /* Buat Memenuhi komponen parentnya, agar bisa diposisikan di kiri*/
+  }
+  .nav-menu.active {
+    right: 0;
+    z-index: 1;
+  }
+  
+  .menu-icon {
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+  .running-text {
+    margin: 0;
+  }
+  .container-form,
+  .navbar {
+    padding: 3rem;
+  }
+
+  .input-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .input-group label {
+    width: 150px;
+    margin-bottom: 0;
+  }
+
+  .input-currency,
+  select,
+  .submit-button {
+    margin-left: 1rem;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .submit-button {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  html,
+  .submit-button {
+    font-size: 40%;
+  }
+  .input-currency,
+  select,
+  .submit-button {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

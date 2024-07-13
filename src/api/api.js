@@ -1,4 +1,3 @@
-import axios from "axios";
 export function getCountries() {
   return fetch("/api/forex/?country")
     .then((response) => {

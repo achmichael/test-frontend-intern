@@ -48,4 +48,4 @@ Aplikasi akan berjalan di `http://localhost:3000`.
 
 `URL DEPLOY`
 
-https://test-currency-xchange.vercel.app
+https://test-frontend-intern.vercel.app/

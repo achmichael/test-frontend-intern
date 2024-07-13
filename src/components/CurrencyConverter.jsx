@@ -12,14 +12,15 @@ function CurrencyConverter() {
   const [inputCurrency, setInputCurrency] = useState("");
   const [firstCurrency, setFirstCurrency] = useState("");
   const [targetCurrency, setTargetCurrency] = useState("");
-  const [conversionResult, setConversionResult] = useState("");
+  const [conversionResult, setConversionResult] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchCountries() {
       try {
         const response = await getCountries();
-        setCountries(response.data); //isi variable country dengan variable array data dari API
+        const parsedData = response.data;
+        setCountries(parsedData); //isi variable country dengan variable array data dari API
         setLoading(false); // set loading menjadi false ketika data sudah selesai di return
       } catch (error) {
         console.log(error);

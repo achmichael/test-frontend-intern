@@ -52,7 +52,7 @@ function Navlogo() {
 function Navlink ({ isMenuOpen, navMenuRef }) {
     return (
         <div ref={navMenuRef} className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
-            <Links link={'#home'} label={'Home'}/>
+            <Links link={'#'} label={'Home'}/>
             <Links link={'#currency-conversion'} label={'Konversi'}/>
             <Links link={'#about'} label={'About'}/>
         </div>

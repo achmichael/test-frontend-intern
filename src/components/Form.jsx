@@ -19,7 +19,7 @@ export function Form({
   }
 
   return (
-    <div className="container-form">
+    <div className="container-form" id='currency-conversion'>
       <form className="currency-form" onSubmit={handleSubmit}>
         <InputCurrency setInputCurrency={setInputCurrency} />
         {countries.length > 0 && (
